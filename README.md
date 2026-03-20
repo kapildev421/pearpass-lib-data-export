@@ -7,12 +7,17 @@ A utility for exporting PearPass vaults to various formats.
 - Export vault data to CSV format.
 - Export vault data to JSON format.
 
+## Security Notice
+
+1. To ensure the security and integrity of your projects, please note that official PearPass packages are distributed exclusively through our GitHub organization.
+2. Any packages with similar names found on the npm registry or other third-party package managers are not affiliated with PearPass and should be strictly avoided. We recommend installing directly from this repository to ensure you are using the verified, open-source version.
+
 ## Installation
 
 Install the package using npm:
 
 ```bash
-npm install pearpass-lib-data-export
+npm install git+https://github.com/tetherto/pearpass-lib-data-export.git
 ```
 
 ## Testing
@@ -30,7 +35,7 @@ Here's how you can use the library to export data:
 ### Export to JSON
 
 ```javascript
-import { parseDataToJson } from 'pearpass-lib-data-export';
+import { parseDataToJson } from '@tetherto/pearpass-lib-data-export';
 
 const vaultData = [
   {
@@ -58,7 +63,7 @@ files.forEach(file => {
 ### Export to CSV
 
 ```javascript
-import { parseDataToCsvText } from 'pearpass-lib-data-export';
+import { parseDataToCsvText } from '@tetherto/pearpass-lib-data-export';
 
 const vaultData = [
   {
@@ -83,15 +88,9 @@ files.forEach(file => {
 });
 ```
 
-## Depended Submodules
-
-The following sibling submodules must be present in the workspace (they are not declared as npm dependencies):
-
-- [`tether-dev-docs`](../tether-dev-docs)
-
 ## Related Projects
 
-*   [pearpass-lib-data-import](https://github.com/tetherto/pearpass-lib-data-import)
+*   [@tetherto/pearpass-lib-data-import](https://github.com/tetherto/pearpass-lib-data-import)
 
 ## License
 
